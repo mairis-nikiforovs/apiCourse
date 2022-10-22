@@ -1,0 +1,32 @@
+package apiCourse.stepdefinitions;
+
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class TrelloSteps {
+
+  // mac - option + enter
+  // win - alt + enter
+  @Given("The board exists and contains the correct information")
+  public void getBoardAndChekInfo(){
+    System.out.println("The 1st step is being executed");
+  }
+
+  @When("I change the board title to {string}")
+  public void changeBoardTitle(String title){
+    System.out.println("The title was changed to: " + title);
+  }
+
+  @When("I check that the board name was updated to {string}")
+  public void checkBoardTitle(String name){
+    System.out.println("The board name was updated to: " + name);
+  }
+
+  @Then("I add a list with title {string} to the board")
+  public void addNewList(String name){
+    System.out.println("We added a new list with name " + name);
+  }
+
+}
